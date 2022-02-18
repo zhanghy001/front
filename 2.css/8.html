@@ -7,22 +7,33 @@
         .div-1 {
             width: 300px;
             height: 330px;
+            background-color: orange;
             background-image: url(../1.html/resource/beauty.jpg);
             /*平铺选项*/
             background-repeat: no-repeat;
-            background-color: orange;
             /*背景位置*/
             background-position: center center;
-            /*背景固定*/
-            background-attachment: fixed;
-
+            /*背景滚动*/
+            background-attachment: scroll;
+            display: inline-block;
+        }
+        .div-2 {
+            width: 300px;
+            height: 330px;
+            /*简写 背景透明度*/
+            background: rgb(0,0,0,0.3) url(../1.html/resource/beauty.jpg) no-repeat scroll center center;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
     <h3>背景图片</h3>
     <p>默认情况下背景都是平铺的</p>
-    <div class="div-1"></div>
+    <div class="div-1">22</div>
+    <div class="div-2">简写+设置了背景透明度</div>
+
+
+
 
 </body>
 </html>

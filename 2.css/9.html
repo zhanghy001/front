@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css三大特性</title>
+    <link rel="stylesheet" href="../css/2common.css">
+    <style>
+        .div-1 {
+            color: olive;
+            font: 18px/1.5 "Microsoft YaHei UI";
+        }
+
+        .div-2 {
+            font-size: 14px;
+        }
+
+        table {
+            width: 500px;
+            height: 180px;
+            text-align: center;
+            border-collapse: collapse;
+            line-height: 30px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        .div-3 .p-1 {
+            color: purple;
+        }
+        .p-1 {
+            color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+<h2>层叠性</h2>
+<p>多个样式发生冲突时，最后声明的会覆盖前面声明的</p>
+<h2>继承性</h2>
+<p>子标签会继承父标签的特性，主要是文字相关的样式和颜色</p>
+</body>
+<p>行高继承，按照文字像素的倍数</p>
+<div class="div-1">
+    99<div class="div-2">qqq</div>
+</div>
+<h2>优先级</h2>
+<table>
+    <thead>
+    <tr>
+        <th>选择器</th>
+        <th>选择器权重</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>继承或者*</td>
+            <td>0,0,0,0</td>
+        </tr>
+        <tr>
+            <td>元素选择器</td>
+            <td>0,0,0,1</td>
+        </tr>
+        <tr>
+            <td>类，伪类选择器</td>
+            <td>0,0,1,0</td>
+        </tr>
+        <tr>
+            <td>id选择器</td>
+            <td>0,1,0,0</td>
+        </tr>
+        <tr>
+            <td>行内样式表</td>
+            <td>1,0,0,0</td>
+        </tr>
+        <tr>
+            <td>!important</td>
+            <td>无穷大</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="div-3">
+    <p class="p-1">权重叠加的问题</p>
+    <p>权重只会叠加，不会进位</p>
+</div>
+</html>
