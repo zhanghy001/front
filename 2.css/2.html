@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css文本属性</title>
+    <style>
+        div {
+            /*颜色*/
+            color: blue;
+            /*对齐方式 居中，左对齐，右对齐*/
+            text-align: center;
+            /*装饰文本 underline:下划线 line-through:删除线 overline:上划线*/
+            text-decoration: underline;
+        }
+        /*给链接去掉下划线*/
+        a {
+            color: green;
+            text-decoration: none;
+        }
+
+        p {
+           /* 首行缩进 */
+            text-indent: 2em;
+            /* 行高=上间距+文字高度+下间距，控制行与行之间的距离*/
+            line-height: 25px ;
+        }
+    </style>
+</head>
+<body>
+    <div><h1>css文本属性</h1></div>
+    <a href="#">没有下划线的链接</a><br/>
+    <p>首行缩进的段落文字<br/>行高测试</p>
+    <p>行高测试</p>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css复合选择器</title>
+    <link rel="stylesheet" href="../css/2common.css"/>
+    <style>
+        /*后代选择器*/
+        ul li {
+            color: blue;
+        }
+
+        .ul li {
+            color: green;
+        }
+
+        /*后代选择器中的子选择器*/
+        .div-1 > p {
+            color: blue;
+        }
+
+        /* 并集选择器  */
+        .div-2,
+        .div-3 {
+            color: blue;
+            text-indent: 2em;
+        }
+        /*伪类选择器，未访问的链接*/
+        a:link{
+            color: black;
+            text-decoration: none;
+        }
+        /*伪类选择器，已访问的链接*/
+        a:visited{
+            color: orange;
+        }
+        /*伪类选择器，鼠标经过的链接*/
+        a:hover{
+            color: blue;
+        }
+        /*伪类选择器，鼠标经过的链接*/
+        a:active{
+            color: green;
+        }
+        /*伪类选择器，input标签获得光标时*/
+        input:focus{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<h2>后代选择器</h2>
+<p>只改变了无序列表里的li，不改变有序列表里的li</p>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ol>
+<p>通过类选择器来指定</p>
+<ul id="ul" class="ul">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<p>后代选择器中的子选择器，只选择儿子不选择孙子</p>
+<div class="div-1">
+    <p>我是儿子</p>
+    <div>
+        <p>我是孙子</p>
+    </div>
+</div>
+
+<h2>并集选择器</h2>
+<div class="div-2">并集选择器1</div>
+<div class="div-3">并集选择器2</div>
+</body>
+
+<h3>link伪类选择器</h3>
+<a href="#">伪类选择器</a>
+<p>链接伪类选择器要生效，必须以LVHA的顺序声明</p>
+
+<h3>focus伪类选择器</h3>
+<input type="text"/>
+<p>上面的文本框获得光标时背景色会变为紫色</p>
+
+</html>

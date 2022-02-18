@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css引入方式</title>
+    <!-- stylesheet是固定值，表示引入的是样式文件   -->
+    <link rel="stylesheet" href="../css/1.css"/>
+    <style>
+        p {
+            color: cadetblue;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+<h3>css引入方式</h3>
+<ul>
+    <li><a href="#one">内部样式表</a></li>
+    <li><a href="#two">行内样式表</a></li>
+    <li><a href="#three">外部样式表</a></li>
+</ul>
+
+<h5 id="one">内部样式表</h5>
+<p>单独写到style标签内部,控制当前整个页面中的样式，也成为嵌入式引入</p>
+<h5 id="two">行内样式表</h5>
+<p style="color: blue;font-size: 20px">这段话就是使用了行内样式表,只可以控制当前的标签样式</p>
+<h5 id="three">外部样式表</h5>
+<p class="p-test">
+    实际开发用的最多，样式单独写到css文件，之后引入，这段话就是使用了外部样式表，控制多个页面,
+    结构与样式相分离
+</p>
+<h3>优先级顺序</h3>
+<div><p style="color: black; font-weight: bold">优先级顺序：行内样式表>内部样式表>外部样式表</p></div>
+<p class="one"></p>
+</body>
+</html>

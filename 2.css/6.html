@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS元素的显示模式</title>
+    <link rel="stylesheet" href="../css/2common.css">
+    <style>
+        .a-test {
+            width: 200px;
+            height: 150px;
+            background-color: purple;
+            /*将行内元素设置为块级元素，从而可以设置高度和宽度*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1 class="center">css元素的显示模式</h1>
+<h3>什么是元素显示模式</h3>
+<p>html元素以什么方式进行显示，一般分为块元素和行内元素</p>
+<p>文字类的元素和行内元素里不能放块级元素</p>
+<p>行内元素无法设置宽度和高度，宽度为内容本身的宽度</p>
+<p>链接里不能再放链接，但是可以放块级元素，比较特殊</p>
+<h3>行内块元素</h3>
+<p>例如：img,input,td等标签</p>
+<p>不同于普通行内元素，这些元素可以设置宽度和高度以及内边距</p>
+<h3>元素的显示模式转换</h3>
+<p>行内元素转换为块级元素</p>
+<a href="#" class="a-test">行内元素转换为块级元素</a>
+<p>将块级元素转换为行内元素</p>
+<div style="display: inline;background-color: orange">1111</div>
+<div style="display: inline;background-color: orange">1111</div>
+<p>转换为行内块元素</p>
+<div style="display: inline-block;width: 2em"></div><a href="#">链接</a>
+</body>
+</html>
