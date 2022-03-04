@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型-下</title>
+    <link rel="stylesheet" href="../css/2common.css"/>
+    <style>
+        .div-common {
+            width: 200px;
+            height: 200px;
+            background-color: olive;
+        }
+
+        .damao, .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .damao {
+            margin-bottom: 100px;
+        }
+        .ermao {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+<h3>外边距</h3>
+
+
+</body>
+<div class="div-common">1</div>
+<div class="div-common" style="margin: 20px">2</div>
+<div style="margin: 0 auto;background-color:orange;width: 300px;height: 200px;text-align: center">
+    块级盒子的水平居中对齐<br/>
+    文字也居中水平对齐了
+</div>
+<br/>
+<div class="damao">外边距合并-相邻块级元素垂直外边距合并</div>
+<div class="ermao">外边距合并-相邻块级元素垂直外边距合并</div>
+</html>

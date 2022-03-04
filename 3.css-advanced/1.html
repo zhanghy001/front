@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css3新特性</title>
+    <style>
+
+        .circle {
+            width: 110px;
+            height: 150px;
+            /*这个参数--圆角边框*/
+            border-radius: 20px;
+            background-color: orange;
+            line-height: 150px;
+            padding: 0 20px;
+            text-align: center;
+            display: inline-block;
+        }
+        .circle-real {
+            margin-left: 20px;
+            width: 110px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: orange;
+            line-height: 150px;
+            padding: 0 20px;
+            text-align: center;
+            display: inline-block;
+        }
+        .shadow {
+            background-color: blue;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .shadow-outside {
+            box-shadow: 10px 20px 15px 20px rgba(0,0,0,.6);
+        }
+        .shadow-inside {
+            margin-left: 80px;
+            box-shadow: 10px 20px 15px 15px rgba(0,0,0,.6) inset;
+            margin-bottom: 60px;
+        }
+        .text-shadow {
+            text-shadow: 5px 5px 5px black;
+        }
+    </style>
+</head>
+<body>
+<h3>圆角边框</h3>
+<div class="circle">
+    圆角边框
+</div>
+<div class="circle-real">
+    圆形边框
+</div>
+<h3>盒子阴影</h3>
+<div class="shadow shadow-outside">
+    盒子阴影--外阴影
+</div>
+<div class="shadow shadow-inside">
+    盒子阴影--内阴影
+</div>
+<h3>文字阴影</h3>
+<div class="text-shadow">
+    文字阴影
+</div>
+</body>
+</html>

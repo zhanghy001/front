@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        .div-float1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+
+        .div-float2 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: right;
+        }
+
+        .div-common {
+            margin: 0px auto;
+            background-color: purple;
+            height: 100px
+        }
+
+        .box {
+            width: 1226px;
+            height: 285px;
+            text-align: center;
+            background-color: olive;
+            line-height: 285px;
+            padding: 0;
+        }
+
+        .box li {
+            list-style: none;
+            width: 296px;
+            height: 285px;
+            float: left;
+            background-color: red;
+            margin-left: 14px;
+        }
+        .box .first {
+            margin-left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+<h3>左浮动模块</h3>
+<div class="div-common">
+    <div class="div-float1">浮动模块1</div>
+    <div class="div-float1">浮动模块2</div>
+</div>
+<br/>
+<h3>右浮动模块</h3>
+<div class="div-common">
+    <div class="div-float2">浮动模块1</div>
+    <div class="div-float2">浮动模块2</div>
+</div>
+<h3>经典案例</h3>
+<ul class="box">
+    <li class="first">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+
+</body>
+</html>

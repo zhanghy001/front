@@ -5,3 +5,13 @@ p {
 .center{
     text-align: center;
 }
+
+table,
+th,
+td{
+    border: black solid;
+}
+
+table {
+    border-collapse: collapse;
+}

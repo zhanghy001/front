@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型-上</title>
+    <link rel="stylesheet" href="../css/2common.css"/>
+    <style>
+        .div-1{
+            width: 300px;
+            height: 300px;
+            border-width: 5px;
+            border-color: blue;
+            border-style: solid;
+            display: inline-block;
+            text-align: center;
+            font-size: 15px;
+        }
+        .div-2 {
+            width: 300px;
+            height: 300px;
+            /*border简写*/
+            border: 15px dashed olive;
+            display: inline-block;
+            text-align: center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<p>盒子模型组成：border边框 content内容 padding内边距 margin 外边距</p>
+<h3>border边框</h3>
+<p>3个属性:width,color,style</p>
+<div class="div-1">1</div>
+<div class="div-2">2<br/>2的盒子实际上为330*330</div>
+<p>表格的细线边框，border-collapse属性，<a href="9.html#table-order">合并相邻的边框</a></p>
+<p>边框会影响盒子实际大小</p>
+</body>
+<h3>padding内边距</h3>
+<div style="width: 200px; height: 200px; padding: 100px; background-color: purple">
+    盒子内边距盒子内边距盒子内边距
+</div>
+<br/>
+<table>
+    <thead>
+        <tr>
+            <th>值的个数</th>
+            <th>表达意思</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>padding:5px</td>
+            <td>上下左右内边距都为5像素</td>
+        </tr>
+        <tr>
+            <td>padding:5px 10px</td>
+            <td>上下边距为5像素，左右内边距为10像素</td>
+        </tr>
+        <tr>
+            <td>padding:5px 10px 20px</td>
+            <td>上边距5像素，左右10像素，下边距20像素</td>
+        </tr>
+        <tr>
+            <td>padding:5px 10px 20px 30px</td>
+            <td>上右下左，顺时针</td>
+        </tr>
+    </tbody>
+</table>
+<p>padding内边距也会影响盒子实际大小</p>
+<p>有种特殊情况 padding不会撑开盒子 不指定width和height时<br/>
+    一个技巧是：给父级标签指定width和height，然后子标签不设置宽高，只设置内边距</p>
+<div style="width: 300px;height: 300px;background-color: olive;">
+    <div style="background-color: blue;padding: 50px">此时不撑开盒子</div>
+    <div style="background-color: blue;width :280px; padding: 50px">此时撑开盒子</div>
+</div>
+</html>
