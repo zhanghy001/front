@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动的4种方法</title>
+    <link rel="stylesheet" href="../css/2common.css">
+    <style>
+        .float-1 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: skyblue;
+        }
+
+        div {
+            text-align: center;
+            background-color: pink;
+        }
+
+        /*习惯性约定写法*/
+        .clearfix:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix{
+            *zoom: 1;
+        }
+
+        .clearfix2:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix2:before{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix2{
+            *zoom: 1;
+        }
+
+    </style>
+</head>
+<body>
+<h3>清除浮动的4种方法</h3>
+<ul>
+    <li>额外标签法--推荐</li>
+    <li>父级添加overflow属性</li>
+    <li>父级添加after伪元素</li>
+    <li>父级添加双伪元素</li>
+</ul>
+<h4>额外标签法--css推荐，但一般不这么用</h4>
+<div>
+    <div class="float-1">1</div>
+    <div class="float-1">2</div>
+    <div class="float-1">3</div>
+    <div style="clear: both"></div>
+</div>
+<div style="background-color: olive">测试--额外标签法</div>
+<p>额外标签法必须是块级元素</p>
+
+<h4>父级添加overflow属性</h4>
+<div style="overflow: hidden">
+    <div class="float-1">1</div>
+    <div class="float-1">2</div>
+    <div class="float-1">3</div>
+</div>
+<div style="background-color: olive">测试</div>
+<p>缺点：无法显示溢出的部分</p>
+
+<h4>父级添加after伪元素</h4>
+<div class="clearfix">
+    <div class="float-1">1</div>
+    <div class="float-1">2</div>
+    <div class="float-1">3</div>
+</div>
+<div style="background-color: olive">测试</div>
+<p>最推荐的写法，样式与结构分离，大厂也用的这种写法</p>
+
+<h4>父级添加双伪元素--before+after</h4>
+<div class="clearfix2">
+    <div class="float-1">1</div>
+    <div class="float-1">2</div>
+    <div class="float-1">3</div>
+</div>
+<div style="background-color: olive">测试</div>
+<p>最推荐的写法，样式与结构分离，大厂也用的这种写法</p>
+</body>
+
+<h3>为什么要清楚浮动</h3>
+<ul>
+    <li>父级没高度</li>
+    <li>子盒子浮动了</li>
+    <li>同时影响下面布局了</li>
+    <p>这种时候需要清楚浮动了</p>
+</ul>
+
+</html>
